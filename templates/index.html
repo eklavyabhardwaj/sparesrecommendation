@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Pump</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            background-image: url('/static/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            opacity: 0.7; /* Adjust for desired shading */
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50; /* Light green color */
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* A darker shade of green for hover effect */
+        }
+
+
+        .select2-container {
+            width: 100% !important;
+        }
+
+        .select2-selection__rendered {
+            padding: 8px !important;
+        }
+
+        .select2-selection {
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Choose Pump Parameters</h2>
+
+<form action="/" method="post">
+    <!-- Dropdown for RPM -->
+    <label for="rpm">Select RPM:</label>
+    <select id="rpm" name="rpm" class="select2">
+        <option value="1">1</option>
+        <option value="19.2">19.2</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="150">150</option>
+        <option value="200">200</option>
+        <option value="240">240</option>
+    </select>
+    <br><br>
+
+    <!-- Dropdown for Tube Size -->
+    <label for="tube_size">Select Tube Size:</label>
+<select id="tube_size" name="tube_size" class = "select2">
+    <option value="1x4">1 x 4</option>
+    <option value="2x5">2 x 5</option>
+    <option value="3x6">3 x 6</option>
+    <option value="4x7">4 x 7</option>
+    <option value="5x8">5 x 8</option>
+    <option value="6x9">6 x 9</option>
+    <option value="8x11">8 x 11</option>
+    <option value="10x13">10 x 13</option>
+    <option value="12x15">12 x 15</option>
+    <option value="6x12">6 x 12</option>
+    <option value="8x14">8 x 14</option>
+    <option value="10x16">10 x 16</option>
+    <option value="12x18">12 x 18</option>
+    <option value="15x21">15 x 21</option>
+    <option value="19x25">19 x 25</option>
+    <option value="25x35">25 x 35</option>
+</select>
+    <br><br>
+
+    <!-- Textbox for Flow Rate -->
+    <label for="flow_rate">Select or Enter Flow Rate:</label>
+  <select id="flow_rate" name="flow_rate" class="select2">
+      <option value="0.08">0.08 LPM</option>
+      <option value="0.1">0.1 LPM</option>
+      <option value="0.2">0.2 LPM</option>
+      <option value="0.3">0.3 LPM</option>
+      <option value="0.5">0.5 LPM</option>
+      <option value="0.6">0.6 LPM</option>
+      <option value="0.7">0.7 LPM</option>
+      <option value="0.8">0.8 LPM</option>
+      <option value="1">1 LPM</option>
+      <option value="1.1">1.1 LPM</option>
+      <option value="1.2">1.2 LPM</option>
+      <option value="1.4">1.4 LPM</option>
+      <option value="1.5">1.5 LPM</option>
+      <option value="1.8">1.8 LPM</option>
+      <option value="2">2 LPM</option>
+      <option value="2.4">2.4 LPM</option>
+      <option value="3">3 LPM</option>
+      <option value="3.5">3.5 LPM</option>
+      <option value="4">4 LPM</option>
+      <option value="5">5 LPM</option>
+      <option value="6">6 LPM</option>
+      <option value="6.8">6.8 LPM</option>
+      <option value="7">7 LPM</option>
+      <option value="8">8 LPM</option>
+      <option value="10">10 LPM</option>
+      <option value="12">12 LPM</option>
+      <option value="13.4">13.4 LPM</option>
+      <option value="15">15 LPM</option>
+      <option value="19">19 LPM</option>
+      <option value="22">22 LPM</option>
+      <option value="25">25 LPM</option>
+      <option value="30">30 LPM</option>
+      <option value="32">32 LPM</option>
+      <option value="40">40 LPM</option>
+      <option value="44">44 LPM</option>
+      <option value="44.5">44.5 LPM</option>
+      <option value="45">45 LPM</option>
+      <option value="50">50 LPM</option>
+      <option value="58">58 LPM</option>
+      <option value="60">60 LPM</option>
+      <option value="65">65 LPM</option>
+      <option value="66">66 LPM</option>
+      <option value="68">68 LPM</option>
+      <option value="70">70 LPM</option>
+      <option value="75">75 LPM</option>
+      <option value="79">79 LPM</option>
+      <option value="80">80 LPM</option>
+      <option value="85">85 LPM</option>
+      <option value="89">89 LPM</option>
+      <option value="90">90 LPM</option>
+      <option value="100">100 LPM</option>
+      <option value="115">115 LPM</option>
+      <option value="120">120 LPM</option>
+      <option value="125">125 LPM</option>
+      <option value="130">130 LPM</option>
+      <option value="134">134 LPM</option>
+      <option value="145">145 LPM</option>
+      <option value="150">150 LPM</option>
+      <option value="155">155 LPM</option>
+      <option value="160">160 LPM</option>
+      <option value="170">170 LPM</option>
+      <option value="180">180 LPM</option>
+      <option value="200">200 LPM</option>
+      <option value="225">225 LPM</option>
+      <option value="235">235 LPM</option>
+      <option value="250">250 LPM</option>
+      <option value="260">260 LPM</option>
+      <option value="280">280 LPM</option>
+      <option value="2900">2900 LPM</option>
+      <option value="300">300 LPM</option>
+      <option value="310">310 LPM</option>
+      <option value="320">320 LPM</option>
+      <option value="350">350 LPM</option>
+      <option value="360">360 LPM</option>
+      <option value="380">380 LPM</option>
+      <option value="400">400 LPM</option>
+      <option value="420">420 LPM</option>
+      <option value="440">440 LPM</option>
+      <option value="460">460 LPM</option>
+      <option value="470">470 LPM</option>
+      <option value="480">480 LPM</option>
+      <option value="500">500 LPM</option>
+      <option value="550">550 LPM</option>
+      <option value="600">600 LPM</option>
+      <option value="650">650 LPM</option>
+      <option value="700">700 LPM</option>
+      <option value="750">750 LPM</option>
+      <option value="800">800 LPM</option>
+      <option value="850">850 LPM</option>
+      <option value="900">900 LPM</option>
+      <option value="950">950 LPM</option>
+      <option value="1000">1000 LPM</option>
+      <option value="1050">1050 LPM</option>
+      <option value="1100">1100 LPM</option>
+      <option value="1150">1150 LPM</option>
+      <option value="1200">1200 LPM</option>
+      <option value="1250">1250 LPM</option>
+      <option value="1300">1300 LPM</option>
+      <option value="1350">1350 LPM</option>
+      <option value="1400">1400 LPM</option>
+      <option value="1450">1450 LPM</option>
+      <option value="1500">1500 LPM</option>
+      <option value="1650">1650 LPM</option>
+      <option value="1700">1700 LPM</option>
+      <option value="1800">1800 LPM</option>
+      <option value="1900">1900 LPM</option>
+      <option value="2200">2200 LPM</option>
+      <option value="2300">2300 LPM</option>
+      <option value="2400">2400 LPM</option>
+      <option value="2500">2500 LPM</option>
+      <option value="2600">2600 LPM</option>
+      <option value="2650">2650 LPM</option>
+      <option value="2750">2750 LPM</option>
+      <option value="2900">2900 LPM</option>
+      <option value="3000">3000 LPM</option>
+      <option value="3250">3250 LPM</option>
+      <option value="3600">3600 LPM</option>
+      <option value="4000">4000 LPM</option>
+      <option value="4400">4400 LPM</option>
+      <option value="5000">5000 LPM</option>
+      <option value="5300">5300 LPM</option>
+  </select>
+    <br><br>
+
+    <input type="submit" value="Get Recommended Pump">
+</form>
+
+<script>
+    // Initialize Select2 on all dropdowns with the class "select2"
+    $('.select2').select2();
+</script>
+
+
+</body>
+</html>
